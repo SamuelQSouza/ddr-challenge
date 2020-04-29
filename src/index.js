@@ -24,6 +24,6 @@ try {
 app.use(routes)
 app.use(cors({ "origin": "*" }))
 
-cron.schedule('0 */1 * * * *', () => match());
+cron.schedule('0 0 */6 * * *', () => match());
 
 app.listen(process.env.PORT)

@@ -24,7 +24,7 @@
 
 
 
-## :information_source: How To Use
+## :information_source: Como usar
 
 Para clonar esta aplicação você precisa ter [Git](https://git-scm.com), [Node.js](https://nodejs.org/) + [NPM](https://www.npmjs.com/) instalado em seu computador.
 
@@ -49,7 +49,7 @@ $ npm install
 $ npm start
 
 ```
-### rotas
+### Rotas
 
 Esta API foi construída com apenas duas rotas, sendo uma para inserir tabulações e a outra para inserir gravações  ambas utilizam o método post e recebem informações em seu corpo no formato json 
 ```
