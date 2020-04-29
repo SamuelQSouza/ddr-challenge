@@ -1,62 +1,61 @@
-# Desafio back-end: matching de informações
 
-## Desafio
-Crie um webservice que receba a entrada das entidades `Gravações` e `Tabulações` em endpoints separados e armazene no banco de dados.
+<h1 align="center">
+    <img alt="ddr-challenge" title="#ddr-challenge" src="https://www.ddrtech.com.br/wp-content/uploads/2019/11/logo-DDR@2x.png" width="250px" background-color="#333" /><h4 align="c
+    
+</h1>
+<h2 align="center">DDR Challenge</h2>
 
-- A aplicação deverá rodar uma rotina em um determinado intervalo de tempo para realizar o relacionamento entre essas duas entidades e amarzenar na tabela/collection `Matchings`;
 
-- Um `matching` é a associação de uma gravação à uma tabulação e cada registro de gravação/tabulação poderá estar associado à somente um *matching*;
+<p>
+  <img alt="GitHub numero de linguagens" src="https://img.shields.io/github/languages/count/SamuelQSouza/ddr-challenge?color=%2304D361">
+  <img alt="tamanho repositório" src="https://img.shields.io/github/repo-size/SamuelQSouza/ddr-challenge">	
+  <a href="https://www.linkedin.com/in/samuelqsouza/">
+    <img alt="Made by SamuelQSouza" src="https://img.shields.io/badge/made%20by-SamuelQSouza-%2304D361">
+  </a>
+   <a href="https://github.com/samuelqsouza/SemanaOmnistack11/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/SamuelQSouza/ddr-challenge">
+  </a>
 
-- Um `matching` entre uma gravação e uma tabulação é realizado através dos campos `tabulacoes.numeroBinado`, `tabulacoes.numeroAcesso` e `gravacoes.telefone`. Ou seja, uma correspondência é criada quando:
 
-  ```
-  (tabulacoes.numeroBinado = gravacoes.telefone) E/OU (tabulacoes.numeroAcesso = gravacoes.telefone)
-  ```
+   <a href="https://github.com/SamuelQSouza/ddr-challenge">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/SamuelQSouza/ddr-challenge?style=social">
+  </a>
 
-- Uma entidade que já está associada à um matching não deverá ser levada em consideração nas próximas execuções do serviço de matching.
 
-### Estrutura de dados de `tabulacoes`
-| Coluna | Tipo |
-| ------ | ---- |
-| id | ObjectID, UUID ou sequencial (primário)
-| nomeCliente | Texto
-| protocolo | Alfanumérico
-| dataAtendimento | Data e hora
-| numeroBinado | Data e hora
-| numeroAcesso | Data e hora
 
-### Estrutura de dados de `Gravações`
-| Coluna | Tipo |
-| ------ | ---- |
-| id | ObjectID, UUID ou sequencial (primário)
-| telefone | Alfanumérico
-| ramal | Alfanumérico
-| dataGravacao | Data e hora
 
-### Estrutura de dados de `Matchings`
-| Coluna | Tipo |
-| ------ | ---- |
-| id | ObjectID, UUID ou sequencial (primário)
-| gravacaoId | ObjectID, UUID ou sequencial (relacionamento)
-| tabulacaoId | ObjectID, UUID ou sequencial (relacionamento)
+## :information_source: How To Use
 
-Ao fim do processo, a aplicação deverá conter:
-- 1x endpoint para armazenar uma tabulação;
-- 1x endpoint para armazenar uma gravação;
-- 1x endpoint para listar os matchings registrados;
-- 1x serviço que rode a cada **6 horas** para realizar a correspondência dessas duas entidades.
+Para clonar esta aplicação você precisa ter [Git](https://git-scm.com), [Node.js](https://nodejs.org/) + [NPM](https://www.npmjs.com/) instalado em seu computador.
 
-## Stack
-A aplicação deverá ser desenvolvida em NodeJS e poderá usar banco de dados relacional ou não-relacional. Poderá ser utilizado qualquer uma dessas tecnologias:
-- Express, AdonisJS, Koa, NestJS, etc;
-- Biblioteca de *scheduling*, ex: node-cron, node-schedule, etc;
-- Mongoose, Knex, Sequelize, etc;
-- Banco de dados relacional ou não relacional, ex: Postgres, MongoDb, etc.
+Em seu terminal:
 
-## Dados
-Utilize os arquivos [gravacoes.json](./gravacoes.json) e [tabulacoes.json](./tabulacoes.json) como exemplo de entrada de dados e o arquivo [matchings.json](matchings.json) como exemplo de saída de dados ao realizar o processo de *matching*.
 
-## Avaliação e entrega
-- Será avaliado organização de código, identação, nomenclaturas de funções e variáveis, organização de pastas/arquivos, assertividade, padrão REST e boas práticas de desenvolvimento;
-- Não há data de entrega;
-- Deverá ser criado um repositório aberto e enviado o link de acesso ao final do teste.
+### Instalando a API
+```bash
+# Clone este repositorio
+$ git clone https://github.com/SamuelQSouza/ddr-challenge
+
+# Entre no diretorio do projeto
+$ cd ddr-challenge
+
+# Instale as dependências
+$ npm install
+
+#modifique o arquivo .env substituindo a variavel DATABASE_URL
+#pela sua url de banco de dados
+
+# execute a API
+$ npm start
+
+```
+### rotas
+
+Esta API foi construída com apenas duas rotas, sendo uma para inserir tabulações e a outra para inserir gravações  ambas utilizam o método post e recebem informações em seu corpo no formato json 
+```
+http://localhost:3333/gravacoes
+http://localhost:3333/tabulacoes
+```
+
+Made by Samuel Souza :wave: [Get in touch!](https://www.linkedin.com/in/samuelqsouza/)
+
