@@ -1,6 +1,6 @@
 
 <h1 align="center">
-    <img alt="ddr-challenge" title="#ddr-challenge" src=".github/logo-DDR@2x.png" width="250px" background-color="#333" /><h4 align="c
+    <img alt="ddr-challenge" title="#ddr-challenge" src=".github/logo-DDR.png" width="250px" background-color="#333" /><h4 align="c
     
 </h1>
 <h2 align="center">DDR Challenge</h2>
